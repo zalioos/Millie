@@ -23,7 +23,7 @@ module.exports = {
           if (!m.msg.url) await this.updateMediaMessage(m)
           break
       }
-      m.exp = 900000000
+      m.exp = 0
       m.limit = false
       try {
         let user = global.db.data.users[m.sender]
@@ -54,7 +54,7 @@ module.exports = {
           if (!isNumber(user.axp)) user.axp = 0
         } else global.db.data.users[m.sender] = {
           exp: 0,
-          limit: 900,
+          limit: 10,
           lastclaim: 0,
           registered: false,
           name: this.getName(m.sender),
@@ -63,9 +63,9 @@ module.exports = {
           afk: -1,
           afkReason: '',
           banned: false,
-          level: 90000000,
+          level: 0,
           call: 0,
-          role: 'head king crown',
+          role: 'Bronze',
           autolevelup: false,
           pc: 0,
           warning: 0,
@@ -89,7 +89,7 @@ module.exports = {
           if (!('descUpdate' in chat)) chat.descUpdate = true
           if (!('stiker' in chat)) chat.stiker = false
           if (!('delete' in chat)) chat.delete = true
-          if (!('antiLink' in chat)) chat.antiLink = true
+          if (!('antiLink' in chat)) chat.antiLink = false
           if (!isNumber(chat.expired)) chat.expired = 0
           if (!('antiBadword' in chat)) chat.antiBadword = true
           if (!('viewonce' in chat)) chat.viewonce = true
@@ -98,7 +98,7 @@ module.exports = {
           welcome: false,
           detect: false,
           sWelcome: '',
-          sBye: 'true',
+          sBye: '',
           sPromote: '',
           sDemote: '',
           descUpdate: true,
@@ -119,7 +119,7 @@ module.exports = {
           if (!'antitroli' in settings) settings.antitroli = true
           if (!'backup' in settings) settings.backup = false
           if (!isNumber(settings.backupDB)) settings.backupDB = 0
-          if (!'groupOnly' in settings) settings.groupOnly = true
+          if (!'groupOnly' in settings) settings.groupOnly = false
           if (!'jadibot' in settings) settings.groupOnly = true
           if (!'nsfw' in settings) settings.nsfw = true
           if (!isNumber(settings.status)) settings.status = 0
@@ -130,7 +130,7 @@ module.exports = {
           antitroli: true,
           backup: false,
           backupDB: 0,
-          groupOnly: true,
+          groupOnly: false,
           jadibot: true,
           nsfw: true,
           status: 0,
@@ -473,8 +473,8 @@ global.dfail = (type, m, conn) => {
     rowner: 'This command can only be used by _*Bot Owner✅*_',
     owner: 'This command can only be used by _*Bot Owner✅*_',
     mods: 'This command can only be used by _*Moderator✅*_',
-    premium: 'premium sadece adminler ozel kullanabir ✅*_',
-    group:   'bu komutu yanlizca gruplarda kullanilabilir'✅',
+    premium: 'This command is only for _*Premium users✅*_',
+    group: 'This command can only be used in groups✅',
     private: 'This command can only be used in Private Chat✅',
     admin: 'This command is only for *Admin* in the group✅',
     botAdmin: 'Make bot an *Admin* to use this command✅',
