@@ -14,17 +14,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Neeraj-x0/Millie.git"
+    "url": "git+https://github.com/Neera-j51/Millie.git"
   },
   "keywords": [
     "whatsapp-bot"
   ],
-  "author": "Neeraj",
+  "author": "joker adanali gg",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Neeraj-x0/Millie/issues"
+    "url": "https://github.com/Neera-j51/Millie/issues"
   },
-  "homepage": "https://github.com/Neeraj-x0/Millie",
+  "homepage": "https://github.com/Neera-j51/Millie",
   "dependencies": {
     "@adiwajshing/baileys": "^3.5.2",
     "@bochilteam/scraper": "0.0.81",
