@@ -165,7 +165,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
           "title": `HI,
 ╭━━━━━━ᆫ ᴍᴇɴᴜ ᄀ━━━━━━
 ┃ ⎆  Oi ${ucapan()}
-┃ ⎆  *NAME* : ${name}
+┃ ⎆ *ADINIZ* : ${adiniz}
 ┃ ⎆  *BOT*   : ᴍɪʟʟɪᴇ
 ┃ ⎆  *OWNER* :  ɴᴇᴇʀᴀᴊ
 ┃ ⎆  *PREFIX* : ᴍᴜʟᴛɪ ᴘʀᴇғɪx 
@@ -283,18 +283,18 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     // ├ ${_p + command} stiker
     // ├ ${_p + command} quotes
     // ├ ${_p + command} admin
-    // ├ ${_p + command} group
+    // ├ ${_p + command} grup
     // ├ ${_p + command} premium
     // ├ ${_p + command} internet
     // ├ ${_p + command} anonymous
     // ├ ${_p + command} nulis
-    // ├ ${_p + command} downloader
+    // ├ ${_p + command} indirme menu
     // ├ ${_p + command} tools
     // ├ ${_p + command} fun
     // ├ ${_p + command} database
     // ├ ${_p + command} vote
     // ├ ${_p + command} quran
-    // ├ ${_p + command} audio
+    // ├ ${_p + command} sarki indirme
     // ├ ${_p + command} jadibot
     // ├ ${_p + command} info
     // ├ ${_p + command} owner
@@ -358,14 +358,14 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 handler.help = ['menu', 'help','list','millie', '?']
 handler.tags = ['main']
 handler.command = /^(list|menu|help|millie|bot|\?)$/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
+handler.owner = true
+handler.mods = true
+handler.premium = true
+handler.group = true
 handler.private = false
 
-handler.admin = false
-handler.botAdmin = false
+handler.admin = true
+handler.botAdmin = true
 
 
 module.exports = handler
@@ -381,18 +381,18 @@ function clockString(ms) {
 }
 function ucapan() {
   const time = moment.tz('Asia/Kolkata').format('HH')
-  res = "Good Morning 🌄"
+  res = "Good hayirli sabahlar 🌄"
   if (time >= 4) {
-    res = "Good Morning 🌞"
+    res = "Good iyi gunler 🌞"
   }
   if (time > 10) {
-    res = "Good afternoon 🌅"
+    res = "Good gunaydin 🌅"
   }
   if (time >= 15) {
-    res = "Good Evening 🌆"
+    res = "Good iyi aksamlar 🌆"
   }
   if (time >= 18) {
-    res = "Good Night 🌌"
+    res = "Good iyi geceler 🌌"
   }
   return res
 }
