@@ -6,7 +6,7 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
     before: `╭────────────────╮
-        ✪  *ᴍɪʟʟɪᴇ* ✪           
+          ✪  *ᴍɪʟʟɪᴇ* ✪           
 ╰────────────────╯
        
   `.trimStart(),
@@ -165,7 +165,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
           "title": `HI,
 ╭━━━━━━ᆫ ᴍᴇɴᴜ ᄀ━━━━━━
 ┃ ⎆  Oi ${ucapan()}
-┃ ⎆ *ADINIZ* : ${adiniz}
+┃ ⎆  *NAME* : ${name}
 ┃ ⎆  *BOT*   : ᴍɪʟʟɪᴇ
 ┃ ⎆  *OWNER* :  ɴᴇᴇʀᴀᴊ
 ┃ ⎆  *PREFIX* : ᴍᴜʟᴛɪ ᴘʀᴇғɪx 
@@ -283,18 +283,18 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     // ├ ${_p + command} stiker
     // ├ ${_p + command} quotes
     // ├ ${_p + command} admin
-    // ├ ${_p + command} grup
+    // ├ ${_p + command} group
     // ├ ${_p + command} premium
     // ├ ${_p + command} internet
     // ├ ${_p + command} anonymous
     // ├ ${_p + command} nulis
-    // ├ ${_p + command} indirme menu
+    // ├ ${_p + command} downloader
     // ├ ${_p + command} tools
     // ├ ${_p + command} fun
     // ├ ${_p + command} database
     // ├ ${_p + command} vote
     // ├ ${_p + command} quran
-    // ├ ${_p + command} sarki indirme
+    // ├ ${_p + command} audio
     // ├ ${_p + command} jadibot
     // ├ ${_p + command} info
     // ├ ${_p + command} owner
@@ -358,14 +358,14 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 handler.help = ['menu', 'help','list','millie', '?']
 handler.tags = ['main']
 handler.command = /^(list|menu|help|millie|bot|\?)$/i
-handler.owner = true
-handler.mods = true
-handler.premium = true
-handler.group = true
+handler.owner = false
+handler.mods = false
+handler.premium = false
+handler.group = false
 handler.private = false
 
-handler.admin = true
-handler.botAdmin = true
+handler.admin = false
+handler.botAdmin = false
 
 
 module.exports = handler
@@ -381,18 +381,18 @@ function clockString(ms) {
 }
 function ucapan() {
   const time = moment.tz('Asia/Kolkata').format('HH')
-  res = "Good hayirli sabahlar 🌄"
+  res = "Good Morning 🌄"
   if (time >= 4) {
-    res = "Good iyi gunler 🌞"
+    res = "Good Morning 🌞"
   }
   if (time > 10) {
-    res = "Good gunaydin 🌅"
+    res = "Good afternoon 🌅"
   }
   if (time >= 15) {
-    res = "Good iyi aksamlar 🌆"
+    res = "Good Evening 🌆"
   }
   if (time >= 18) {
-    res = "Good iyi geceler 🌌"
+    res = "Good Night 🌌"
   }
   return res
 }
