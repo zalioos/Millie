@@ -1,6 +1,6 @@
 let fs = require('fs')
-global.owner = ['905379649077'] // Put your number here
-global.mods =  JSON.parse(fs.readFileSync('./src/moderator.json'))// Moderator?
+küresel . sahip    447451220190     = [ '' ] //  447418322590
+küresel . modlar             =              JSON . ayrıştırma ( fs . readFileSync ( './src/moderator.json' )) // Moderatör?
 global.prems = JSON.parse(fs.readFileSync('./src/premium.json')) // Premium users do not need a limit
 global.tod = JSON.parse(fs.readFileSync('./src/tod.json'))
 global.APIs = { // API Prefix
@@ -27,20 +27,21 @@ global.APIKeys = { // The APIKey is here
   'https://pencarikode.xyz': 'pais',
   'https://api.xteam.xyz': 'FuzBot1',
   'https://api.lolhuman.xyz': 'sdz8VotwEnDd4HvdIUfy1e4qTDx',
-  'https://zahirr-web.herokuapp.com': 'zahirgans',
+  'https://zahirr-web.herokuapp.com' : 'zahirganlar' ,
   'https://api.zeks.xyz': 'apivinz',
 }
 
 // Sticker WM
-global.packname = '💋 joker bot 💋'
-global.author = 'joker adanali gg'
+küresel . paket      adı      =      '🍁Zalioo🍁
+küresel . yazar   =   '🍁Zalioos'🍁 🍁
+küresel . yazar     =     'S2Ş serhat'
 
 
 global.wait = '_*Please Wait..*_'
 global.eror = '_*Server Error*_'
 global.fla = 'https://github.com/neera-j/Bot-Files/blob/main/images/millie.jpg'
 
-global.watermark = '© joker bot'
+global.watermark = '© jZalioos bot'
 
 global.multiplier = 69 // The higher it is, the harder it is to level up
 
