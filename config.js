@@ -1,6 +1,6 @@
-let fs = require('fs')
-global.owner = ['905379649077'] // Put your number here
-global.mods =  JSON.parse(fs.readFileSync('./src/moderator.json'))// Moderator?
+let   fs   =   gerektirir ( 'fs' )
+küresel . sahip = [ ' 447451220190' ]  //   447418322590
+küresel . modlar  =   JSON . ayrıştırma ( fs . readFileSync ( './src/moderator.json' )) // Moderatör?
 global.prems = JSON.parse(fs.readFileSync('./src/premium.json')) // Premium users do not need a limit
 global.tod = JSON.parse(fs.readFileSync('./src/tod.json'))
 global.APIs = { // API Prefix
@@ -32,15 +32,15 @@ global.APIKeys = { // The APIKey is here
 }
 
 // Sticker WM
-global.packname = '💋 joker bot 💋'
-global.author = 'joker adanali gg'
+küresel . paket adı = ' 🍁 zalioos bot 🍁' 
+küresel . yazar  =  'zalioos'
 
 
 global.wait = '_*Please Wait..*_'
 global.eror = '_*Server Error*_'
 global.fla = 'https://github.com/neera-j/Bot-Files/blob/main/images/millie.jpg'
 
-global.watermark = '© joker bot'
+küresel . filigran        =        '© Zalioos'
 
 global.multiplier = 69 // The higher it is, the harder it is to level up
 
